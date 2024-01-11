@@ -1,0 +1,6 @@
+[submodule "extensions/GReaderRedate"]
+	path = extensions/GReaderRedate
+	url = https://github.com/javerous/freshrss-greader-redate
+[submodule "extensions/Official"]
+	path = extensions/Official
+	url = https://github.com/FreshRSS/Extensions
