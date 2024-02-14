@@ -20,9 +20,10 @@ FROM alpine:edge as h2o
 RUN mkdir -p /app
 WORKDIR /
 
+# 2024-02-12
 ARG GITHUB_H2O_OWNER=h2o
 ARG GITHUB_H2O_REPOSITORY=h2o
-ARG GITHUB_H2O_REVISION=0d13a40ee8441dff5180e69309e1f78e3da50daf
+ARG GITHUB_H2O_REVISION=123f5e2b65dcdba8f7ef659a00d24bd1249141be
 
 RUN apk add --update --no-cache --virtual h2o-build \
       bison \
