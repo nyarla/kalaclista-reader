@@ -120,7 +120,6 @@ RUN apk add --update --no-cache \
       php-simplexml \
       php-tokenizer \
       php-xml \
-      php-xml \
       php-xmlreader \
       php-xmlwriter \
       php-zip \
