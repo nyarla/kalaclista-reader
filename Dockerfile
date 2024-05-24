@@ -159,7 +159,7 @@ RUN cd /var/lib/freshrss \
   && chown -R nobody:nobody .
 
 COPY --from=h2o /opt /opt
-COPY --from=goreman --chmod=0500 /opt/bin/gooreman /opt/bin/
+COPY --from=goreman --chmod=0500 /opt/bin/goreman /opt/bin/
 COPY --from=litestream --chmod=0500 /opt/bin/litestream /opt/bin/
 
 COPY --chmod=0400 runtime/litestream.json /var/run/freshrss/litestream.conf
