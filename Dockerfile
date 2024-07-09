@@ -167,7 +167,6 @@ COPY --chmod=0400 runtime/Procfile /var/run/freshrss/Procfile
 COPY --chmod=0400 runtime/h2o.json /var/run/freshrss/h2o.conf
 COPY --chmod=0700 entrypoint.sh /opt/bin/entrypoint.sh
 
-COPY --chmod=0400 --chown=nobody:nobody extensions/GReaderRedate/xExtension-GReaderRedate /var/lib/freshrss/extensions/xExtension-GReaderRedate
 COPY --chmod=0444 --chown=nobody:nobody extensions/Official/xExtension-CustomCSS /var/lib/freshrss/extensions/xExtension-CustomCSS
 
 WORKDIR /var/run/freshrss
