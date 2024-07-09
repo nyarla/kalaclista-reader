@@ -1,5 +1,5 @@
 # litestream
-FROM golang:1.21.8-alpine as goreman
+FROM golang:1.22.5-alpine as goreman
 
 RUN mkdir -p /opt/bin
 WORKDIR /
@@ -31,7 +31,7 @@ RUN apk add --update --no-cache --virtual goreman-build \
 
 
 # litestream
-FROM golang:1.21.8-alpine as litestream
+FROM golang:1.22.5-alpine as litestream
 
 RUN mkdir -p /opt/bin
 WORKDIR /
@@ -62,7 +62,7 @@ RUN apk add --update --no-cache --virtual litestream-build \
     && cd / && rm -rf /src /root
 
 # h2o
-FROM alpine:3.19 as h2o
+FROM alpine:3.20 as h2o
 
 RUN mkdir -p /opt
 WORKDIR /
@@ -104,7 +104,7 @@ RUN apk add --update --no-cache --virtual h2o-build \
   && cd / && rm -rf /src /root
 
 # freshrss
-FROM alpine:3.19 as runtime
+FROM alpine:3.20 as runtime
 
 RUN mkdir -p /data/freshrss /var/lib/freshrss /var/run/freshrss
 
