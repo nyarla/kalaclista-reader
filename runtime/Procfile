@@ -1,4 +1,4 @@
-h2o: while true ; do /app/bin/h2o -c /var/run/freshrss/h2o.conf ; done
+h2o: while true ; do /opt/bin/h2o -c /var/run/freshrss/h2o.conf ; done
 php: while true ; do env PHP_FCGI_CHILDREN=10 /usr/bin/php-cgi -b 127.0.0.1:9999 ; done
 cron: while true ; do sleep 450 ; /var/lib/freshrss/app/actualize_script.php ; sleep 450 ; done
-litestream: while true ; do /app/bin/litestream replicate -config /var/run/freshrss/litestream.conf; done
+litestream: while true ; do /opt/bin/litestream replicate -config /var/run/freshrss/litestream.conf; done
