@@ -171,4 +171,4 @@ COPY --chmod=0400 --chown=nobody:nobody extensions/GReaderRedate/xExtension-GRea
 COPY --chmod=0444 --chown=nobody:nobody extensions/Official/xExtension-CustomCSS /var/lib/freshrss/extensions/xExtension-CustomCSS
 
 WORKDIR /var/run/freshrss
-ENTRYPOINT ["/app/bin/entrypoint.sh"]
+ENTRYPOINT ["/opt/bin/entrypoint.sh"]

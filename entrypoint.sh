@@ -30,4 +30,4 @@ fi
 
 # start FreshRSS command
 cd /var/run/freshrss
-/app/bin/goreman start
+/opt/bin/goreman start
