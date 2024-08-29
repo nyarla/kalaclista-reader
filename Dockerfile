@@ -1,5 +1,5 @@
 # litestream
-FROM golang:1.22.5-alpine as goreman
+FROM golang:1.23.0-alpine as goreman
 
 RUN mkdir -p /opt/bin
 WORKDIR /
@@ -31,7 +31,7 @@ RUN apk add --update --no-cache --virtual goreman-build \
 
 
 # litestream
-FROM golang:1.22.5-alpine as litestream
+FROM golang:1.23.0-alpine as litestream
 
 RUN mkdir -p /opt/bin
 WORKDIR /
@@ -142,8 +142,8 @@ RUN apk add --update --no-cache \
 
 ARG GITHUB_FRESHRSS_OWNER=FreshRSS
 ARG GITHUB_FRESHRSS_REPO=FreshRSS
-ARG GITHUB_FRESHRSS_REV=9b2bb50e410607fc67ecafbdaf85ffc4830723e2
-ARG GITHUB_FRESHRSS_VERSION=1.24.1
+ARG GITHUB_FRESHRSS_REV=ca28c90f8bf1603594a1489bdeefd2d72e7e18bb
+ARG GITHUB_FRESHRSS_VERSION=1.24.2
 
 RUN cd /var/lib/freshrss \
   \
@@ -166,8 +166,6 @@ COPY --chmod=0400 runtime/litestream.json /var/run/freshrss/litestream.conf
 COPY --chmod=0400 runtime/Procfile /var/run/freshrss/Procfile
 COPY --chmod=0400 runtime/h2o.json /var/run/freshrss/h2o.conf
 COPY --chmod=0700 entrypoint.sh /opt/bin/entrypoint.sh
-
-COPY --chmod=0444 --chown=nobody:nobody extensions/Official/xExtension-CustomCSS /var/lib/freshrss/extensions/xExtension-CustomCSS
 
 WORKDIR /var/run/freshrss
 ENTRYPOINT ["/opt/bin/entrypoint.sh"]
